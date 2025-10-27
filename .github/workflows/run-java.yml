@@ -3,7 +3,7 @@ name: Run Java Program
 on:
   push:            # Déclenchement automatique à chaque modification
     branches: [ "main" ]
- 
+  
 
 jobs:
   run-java:
@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-          
+          distribution: 'temurin'
 
       - name: Run HelloWorld.java
         run: |

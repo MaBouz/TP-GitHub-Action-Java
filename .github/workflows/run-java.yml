@@ -3,7 +3,10 @@ name: Run Java Program
 on:
   push:            # Déclenchement automatique à chaque modification
     branches: [ "main" ]
-  
+  pull_request:
+    branches: [ "main" ]        # ou PR vers main
+  workflow_dispatch:             # permet de le lancer manuellement aussi
+
 
 jobs:
   run-java:
